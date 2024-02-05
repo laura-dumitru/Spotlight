@@ -14,7 +14,7 @@ body {
 }
 h1,
 p {
-  margin: 1.5em 0;
+  margin: 1em 0;
 }
 p {
   font-size: 1.2em;
@@ -43,6 +43,7 @@ img {
   height: 100%;
   background-color: black;
   opacity: 90%;
+  cursor: pointer;
 
   mask: radial-gradient(
     var(--mouse-x) var(--mouse-y),
@@ -61,18 +62,52 @@ img {
 button {
   border: none;
   outline: none;
-  font-size: 1em;
-  font-weight: 600;
 }
-.toggle {
-  padding: 0.7em 0.7em;
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   background-color: white;
-  border-radius: 50px;
+  opacity: 50%;
+  width: 5.5em;
+  height: 2.2em;
+  border-radius: 2em;
+  position: absolute;
+  left: 57%;
+  top: 80%;
+  z-index: 2;
+}
+.on {
+  background-color: #020202;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin-left: 2px;
 }
 .cta {
   line-height: 1.5em;
-  padding: 1em 2em;
+  padding: 1em 2.5em;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid #020202;
   margin-top: 2em;
+}
+footer svg {
+  transition: color 0.5s ease-in-out;
+}
+
+footer svg.lucide {
+  color: #020202;
+  margin-top: 4em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  width: 40px;
+  height: 40px;
+}
+
+footer svg.lucide:hover {
+  color: #e59973;
+}
+
+footer a {
+  text-decoration: none;
 }
