@@ -63,6 +63,10 @@ button {
   border: none;
   outline: none;
 }
+button a {
+  text-decoration: none;
+  color: inherit;
+}
 .button-container {
   display: flex;
   justify-content: flex-start;
@@ -71,29 +75,30 @@ button {
   width: 5.5em;
   height: 2.2em;
   margin: 0 auto;
-  margin-top: 2em;
+  margin-top: 1.5em;
+  border: 2px solid #020202;
   border-radius: 2em;
 }
+
 .on {
-  background-color: #020202;
+  border: none;
+  outline: none;
+  background: transparent;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  margin-left: 2px;
   transition: margin-left 0.5s;
 }
 .cta {
   font-weight: bold;
-  line-height: 1.5em;
-  padding: 0.75em 4em;
+  line-height: 2em;
+  padding: 1em 3em;
   background-color: white;
-  border: 1px solid #020202;
-  margin-top: 2em;
+  border: 2px solid #020202;
+  margin-top: 1.5em;
 }
+
 footer svg {
   transition: color 0.5s ease-in-out;
 }
-
 footer svg.lucide {
   color: #020202;
   margin-top: 4em;
@@ -101,12 +106,11 @@ footer svg.lucide {
   margin-left: 1em;
   width: 40px;
   height: 40px;
+  stroke-width: 1.5px;
 }
-
 footer svg.lucide:hover {
   color: #e59973;
 }
-
 footer a {
   text-decoration: none;
 }
