@@ -16,14 +16,17 @@ function touchStart(e) {
   //console.log(y);
   //console.log(e);
   overlay.style.setProperty("--mouse-x", `${x}px`); //setting the x property to the mouse position
-  overlay.style.setProperty("--mouse-y", `${y - 64}px`);
+  overlay.style.setProperty("--mouse-y", `${y - 100}px`);
 }
-
-/*off.addEventListener("click", () => {
-  overlay.style.display = "none";
-});*/
+let isMoved = false;
 
 on.addEventListener("click", () => {
-  //overlay.style.display = "inherit";
-  overlay.style.display = "none";
+  if (isMoved === true) {
+    overlay.style.display = "none";
+    on.style.marginLeft = "calc(100% - 34px)";
+  } else {
+    overlay.style.display = "inherit"; // Show overlay
+    on.style.marginLeft = "2px"; //
+  }
+  isMoved = !isMoved;
 });
