@@ -20,23 +20,36 @@ p {
   font-size: 1.2em;
 }
 
-img {
-  max-height: 60vh;
-  display: block;
+.container {
+  max-width: 25vw;
   margin: 0 auto;
 }
-.container {
-  width: 100%;
-  height: 100%;
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
   width: 100%;
   height: 100%;
-
   background-color: black;
-  opacity: 80%;
-  /*mask: radial-gradient(var(--mouse-x) var(--mouse-y), var(--spotlight-width) var(--spotlight-height), transparent 0, black);*/
+  opacity: 90%;
+
+  mask: radial-gradient(
+    var(--mouse-x) var(--mouse-y),
+    var(--spotlight-width) var(--spotlight-height),
+    transparent 0,
+    black
+  );
   -webkit-mask: -webkit-radial-gradient(
     var(--mouse-x) var(--mouse-y),
     var(--spotlight-width) var(--spotlight-height),
@@ -44,6 +57,7 @@ img {
     black
   );
 }
+
 button {
   border: none;
   outline: none;
