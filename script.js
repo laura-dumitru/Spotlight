@@ -8,7 +8,6 @@ let pulseTimeout;
 lucide.createIcons();
 
 overlay.addEventListener("mousemove", pointerMove);
-//overlay.addEventListener("mouseout", TODO);
 
 const duration = 0.75;
 
@@ -90,7 +89,7 @@ function pointerMove(e) {
   }
 
   overlay.style.setProperty("--mouse-x", `${x}px`); //setting the x property to the mouse position
-  overlay.style.setProperty("--mouse-y", `${y - 100}px`);
+  overlay.style.setProperty("--mouse-y", `${y - 80}px`);
 
   userInteraction = setInterval(() => {
     clearInterval(userInteraction);
