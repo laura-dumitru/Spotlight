@@ -4,8 +4,8 @@
   --spotlight-width: 80px;
   --spotlight-height: var(--spotlight-width);
   --spotlight-soft-edge: 80%;
-  --mouse-x: 50%;
-  --mouse-y: 50%;
+  --mouse-x: 80%;
+  --mouse-y: 15%;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -83,6 +83,7 @@ button a {
 .on {
   border: none;
   outline: none;
+  cursor: pointer;
   background: transparent;
   border-radius: 50%;
   transition: margin-left 0.5s;
