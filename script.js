@@ -2,6 +2,7 @@ const overlay = document.querySelector(".overlay");
 const on = document.querySelector(".on");
 const off = document.querySelector(".off");
 const icon = document.querySelector(".icon");
+const timeline = gsap.timeline();
 
 lucide.createIcons();
 
@@ -10,6 +11,28 @@ overlay.addEventListener("mousemove", touchStart);
 /*overlay.addEventListener("mousemove", function () {
   console.log("Moving!");
 });*/
+
+function initialAnimation() {
+  timeline.to(".overlay", {
+    "--mouse-x": "50%",
+    "--mouse-y": "30%",
+    duration: 0.5,
+    ease: "slow(0.2, 0.2, false)",
+  });
+  timeline.to(".overlay", {
+    "--mouse-x": "70%",
+    "--mouse-y": "50%",
+    duration: 0.5,
+    ease: "slow(0.2, 0.2, false)",
+  });
+  timeline.to(".overlay", {
+    "--mouse-x": "35%",
+    "--mouse-y": "70%",
+    duration: 0.5,
+    ease: "slow(0.2, 0.2, false)",
+  });
+}
+initialAnimation();
 
 function touchStart(e) {
   e.preventDefault();
