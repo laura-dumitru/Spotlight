@@ -61,19 +61,7 @@ function pulse() {
 }
 pulse();
 
-/*
-const edges = gsap.timeline();
-
-		// Check if mouse is at edge of screen
-		if (x <= 3 || y <= -3 || x >= div.clientWidth - 3 || y >= div.clientHeight - 3) {
-
-			edges.to(".overlay", {"--spotlight-width": 0, "--spotlight-height": 0, duration: 0.25, ease: "low(0.5, 0.5, false)" });
-		} else {
-		    edges.to(".overlay", {"--spotlight-width": options.spotlightSize,"--spotlight-height": options.spotlightSize,duration: 0.25 });
-		}
-	}
-
-*/
+const overlayRect = overlay.getBoundingClientRect();
 
 let userInteraction;
 function pointerMove(e) {
@@ -82,6 +70,25 @@ function pointerMove(e) {
 
   const x = e.offsetX;
   const y = e.offsetY;
+  const edges = gsap.timeline();
+
+  //const edge = 3
+  if (x <= 3 || y <= 3 || x >= overlayRect.width - 3 || y >= overlayRect.height - 3) {
+    console.log("TOUCHED EDGE");
+    edges.to(".overlay", {
+      "--spotlight-width": 0,
+      "--spotlight-height": 0,
+      duration: 0.25,
+      ease: "low(0.5, 0.5, false)",
+    });
+  } else {
+    edges.to(".overlay", {
+      "--spotlight-width": "5em",
+      "--spotlight-height": "5em",
+      duration: 0.25,
+    });
+  }
+
   overlay.style.setProperty("--mouse-x", `${x}px`); //setting the x property to the mouse position
   overlay.style.setProperty("--mouse-y", `${y - 100}px`);
 
@@ -99,7 +106,7 @@ on.addEventListener("click", () => {
     on.innerHTML = `<i class="icon" data-lucide="flashlight"></i>`;
   } else {
     overlay.style.display = "none"; // Hide overlay
-    on.style.marginLeft = "calc(100% - 2.8em)"; // Move right
+    on.style.marginLeft = "calc(100% - 3.2em)"; // Move right
     on.innerHTML = `<i class="icon" data-lucide="flashlight-off"></i>`;
   }
   isMoved = !isMoved;
