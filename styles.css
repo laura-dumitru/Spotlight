@@ -11,15 +11,15 @@
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
-  background-color: white;
+  background-color: #b2cddc;
 }
 main {
-  background-color: var(--background-color);
+  background-color: white;
   max-width: 24vw;
   display: block;
   margin: 0 auto;
-  padding: 1em;
-  border-radius: 1em;
+  border: 1px solid black;
+  padding-bottom: 1.5em;
 }
 
 p {
@@ -38,7 +38,6 @@ p {
 img {
   max-width: 100%;
   max-height: 100%;
-  border-radius: 1em;
 }
 
 .overlay {
@@ -51,7 +50,6 @@ img {
   background-color: var(--background-color);
   opacity: 90%;
   cursor: pointer;
-
   mask: radial-gradient(
     var(--mouse-x) var(--mouse-y),
     var(--spotlight-width) var(--spotlight-height),
@@ -83,6 +81,7 @@ button a {
   height: 2.2em;
   margin: 0 auto;
   margin-top: 1.5em;
+  border: 1px solid black;
   border-radius: 2em;
 }
 
@@ -99,6 +98,7 @@ button a {
   line-height: 2em;
   padding: 1em 3em;
   background-color: white;
+  border: 1px solid black;
   margin-top: 1.5em;
 }
 
@@ -115,7 +115,7 @@ footer svg.lucide {
   stroke-width: 1.5px;
 }
 footer svg.lucide:hover {
-  color: #e59973;
+  color: white;
 }
 footer a {
   text-decoration: none;
