@@ -10,25 +10,26 @@ lucide.createIcons();
 overlay.addEventListener("mousemove", pointerMove);
 
 const duration = 0.75;
+const ease = "slow(0.2, 0.2, false)";
 
 function initialAnimation() {
   timeline.to(".overlay", {
     "--mouse-x": "33%",
     "--mouse-y": "33%",
     duration,
-    ease: "slow(0.2, 0.2, false)",
+    ease: ease,
   });
   timeline.to(".overlay", {
     "--mouse-x": "75%",
     "--mouse-y": "50%",
     duration,
-    ease: "slow(0.2, 0.2, false)",
+    ease: ease,
   });
   timeline.to(".overlay", {
     "--mouse-x": "33%",
     "--mouse-y": "75%",
     duration,
-    ease: "slow(0.2, 0.2, false)",
+    ease: ease,
   });
 }
 initialAnimation();
@@ -38,24 +39,25 @@ function pulse() {
     "--spotlight-width": "6em",
     "--spotlight-height": "6em",
     duration: 0.25,
+    ease: ease,
   });
   timeline.to(".overlay", {
     "--spotlight-width": "5em",
     "--spotlight-height": "5em",
     duration: 0.25,
-    ease: "slow(0.2, 0.3, false)",
+    ease: ease,
   });
   timeline.to(".overlay", {
     "--spotlight-width": "6em",
     "--spotlight-height": "6em",
     duration: 0.25,
-    ease: "slow(0.2, 0.3, false)",
+    ease: ease,
   });
   timeline.to(".overlay", {
     "--spotlight-width": "5em",
     "--spotlight-height": "5em",
     duration: 0.25,
-    ease: "slow(0.2, 0.3, false)",
+    ease: ease,
   });
 }
 pulse();
@@ -73,7 +75,6 @@ function pointerMove(e) {
 
   //const edge = 3
   if (x <= 3 || y <= 3 || x >= overlayRect.width - 3 || y >= overlayRect.height - 3) {
-    console.log("TOUCHED EDGE");
     edges.to(".overlay", {
       "--spotlight-width": 0,
       "--spotlight-height": 0,
@@ -85,6 +86,7 @@ function pointerMove(e) {
       "--spotlight-width": "5em",
       "--spotlight-height": "5em",
       duration: 0.25,
+      ease: ease,
     });
   }
 
