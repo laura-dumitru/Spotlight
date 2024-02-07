@@ -18,7 +18,8 @@ main {
   max-width: 24vw;
   display: block;
   margin: 0 auto;
-  border: 1px solid black;
+  /* border: 2em solid black;
+  border-radius: 1em; */
   padding-bottom: 1.5em;
 }
 
@@ -100,6 +101,7 @@ button a {
   background-color: white;
   border: 1px solid black;
   margin-top: 1.5em;
+  letter-spacing: 0.05em;
 }
 
 footer svg {
