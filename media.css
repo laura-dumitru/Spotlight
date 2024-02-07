@@ -6,6 +6,10 @@
     margin: 0;
     background-color: white;
   }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
   .container {
     max-width: 100vw;
   }
@@ -13,5 +17,15 @@
   p,
   footer {
     display: none;
+  }
+  .instructions {
+    opacity: 1;
+  }
+  .button-container {
+    margin-top: 2em;
+  }
+  .cta {
+    margin-top: 2em;
+    padding: 1em 4em;
   }
 }
