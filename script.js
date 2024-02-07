@@ -71,11 +71,10 @@ function pointerMove(e) {
   e.preventDefault();
   clearInterval(userInteraction);
 
-  const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-  const mobile = regex.test(navigator.userAgent);
+  let x, y;
 
-  if (mobile) {
-    // For mobile, use touch event coordinates
+  if (e.touches && e.touches.length > 0) {
+    // For mobile devices, use touch event coordinates
     x = e.touches[0].clientX;
     y = e.touches[0].clientY;
   } else {
