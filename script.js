@@ -8,7 +8,7 @@ let pulseTimeout;
 lucide.createIcons();
 
 overlay.addEventListener("mousemove", pointerMove);
-overlay.addEventListener("touchstart", pointerMove);
+overlay.addEventListener("touchmove", pointerMove);
 
 const duration = 0.75;
 const ease = "slow(0.2, 0.2, false)";
@@ -67,7 +67,7 @@ const overlayRect = overlay.getBoundingClientRect();
 
 let userInteraction;
 function pointerMove(e) {
-  console.log(e);
+  //console.log(e);
   e.preventDefault();
   clearInterval(userInteraction);
 
