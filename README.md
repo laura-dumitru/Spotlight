@@ -1,6 +1,6 @@
 # Spotlight
 
-## An interactive horizontal slider quiz built with JavaScript and GSAP animation.
+## An interactive project built with JavaScript and GSAP animation.
 
 Spotlight is a replica of an interactive mobile ad which uses tap and hold functionality to draw focus to a specific area on the screen. It uses a mask over an image to create the spotlight effect and GSAP animation to engage the user to interact with the ad. The spotlight can be turned on or off using the toggle.
 
