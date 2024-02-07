@@ -67,12 +67,10 @@ const overlayRect = overlay.getBoundingClientRect();
 
 let userInteraction;
 function pointerMove(e) {
-  //console.log(e);
   e.preventDefault();
   clearInterval(userInteraction);
 
   let x, y;
-
   if (e.touches && e.touches.length > 0) {
     // For mobile devices, use touch event coordinates
     x = e.touches[0].clientX;
@@ -85,8 +83,8 @@ function pointerMove(e) {
 
   const edges = gsap.timeline();
 
-  //const edge = 3
-  if (x <= 3 || y <= 3 || x >= overlayRect.width - 3 || y >= overlayRect.height - 3) {
+  //const edge = 4
+  if (x <= 4 || y <= 100 || x >= overlayRect.width - 4 || y >= overlayRect.height - 4) {
     edges.to(".overlay", {
       "--spotlight-width": 0,
       "--spotlight-height": 0,
@@ -120,14 +118,16 @@ on.addEventListener("click", () => {
   } else {
     overlay.style.display = "none"; // Hide overlay
 
-    // Adjust margin based on viewport width
+    on.style.marginLeft = "55%";
+
+    /* Adjust margin based on viewport width
     if (window.innerWidth > 768) {
       // For viewport width larger than 768px, move the icon to the right by 3.2em
       on.style.marginLeft = "calc(100% - 3.2em)";
     } else {
       // For viewport width smaller than or equal to 768px, move the icon to the right by 2em
       on.style.marginLeft = "calc(100% - 4em)";
-    }
+    }*/
 
     //on.style.marginLeft = "calc(100% - 3.2em)"; // Move right
 
