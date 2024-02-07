@@ -67,11 +67,25 @@ const overlayRect = overlay.getBoundingClientRect();
 
 let userInteraction;
 function pointerMove(e) {
+  console.log(e);
   e.preventDefault();
   clearInterval(userInteraction);
 
-  const x = e.offsetX;
-  const y = e.offsetY;
+  const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  const mobile = regex.test(navigator.userAgent);
+
+  if (mobile) {
+    // For mobile, use touch event coordinates
+    x = e.touches[0].clientX;
+    y = e.touches[0].clientY;
+  } else {
+    // For desktop, use mouse event coordinates
+    x = e.offsetX;
+    y = e.offsetY;
+  }
+
+  //const x = e.offsetX;
+  //const y = e.offsetY;
   const edges = gsap.timeline();
 
   //const edge = 3
