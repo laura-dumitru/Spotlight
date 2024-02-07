@@ -7,24 +7,24 @@
   --mouse-x: 80%;
   --mouse-y: 15%;
   --background-color: #050001;
+  --blue: #b2cddc;
 }
 body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  background-color: #b2cddc;
+  background-color: var(--blue);
 }
 main {
   background-color: white;
   max-width: 24vw;
   display: block;
   margin: 0 auto;
-  /* border: 2em solid black;
-  border-radius: 1em; */
   padding-bottom: 1.5em;
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1em;
+  letter-spacing: 0.05em;
 }
 
 .container {
