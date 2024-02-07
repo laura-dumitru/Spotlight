@@ -73,6 +73,9 @@ button a {
   text-decoration: none;
   color: inherit;
 }
+.instructions {
+  opacity: 0;
+}
 .button-container {
   display: flex;
   justify-content: flex-start;
