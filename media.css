@@ -19,14 +19,21 @@
     display: none;
   }
   .instructions {
-    opacity: 1;
+    display: inherit;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 1.5em;
+    letter-spacing: 0.05em;
   }
   .button-container {
-    margin-top: 2em;
+    margin-top: 1em;
   }
   .cta {
-    margin-top: 2em;
-    padding: 1em 4em;
+    margin-top: 1em;
+    padding: 1em 5em;
+  }
+  .on {
+    color: black;
   }
   button a {
     color: black;
