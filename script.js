@@ -83,8 +83,6 @@ function pointerMove(e) {
     y = e.offsetY;
   }
 
-  //const x = e.offsetX;
-  //const y = e.offsetY;
   const edges = gsap.timeline();
 
   //const edge = 3
@@ -121,9 +119,22 @@ on.addEventListener("click", () => {
     on.innerHTML = `<i class="icon" data-lucide="flashlight"></i>`;
   } else {
     overlay.style.display = "none"; // Hide overlay
-    on.style.marginLeft = "calc(100% - 3.2em)"; // Move right
+
+    // Adjust margin based on viewport width
+    if (window.innerWidth > 768) {
+      // For viewport width larger than 768px, move the icon to the right by 3.2em
+      on.style.marginLeft = "calc(100% - 3.2em)";
+    } else {
+      // For viewport width smaller than or equal to 768px, move the icon to the right by 2em
+      on.style.marginLeft = "calc(100% - 4em)";
+    }
+
+    //on.style.marginLeft = "calc(100% - 3.2em)"; // Move right
+
     on.innerHTML = `<i class="icon" data-lucide="flashlight-off"></i>`;
   }
   isMoved = !isMoved;
   lucide.createIcons();
 });
+
+//lucide icon goes too far to the right on mobile
