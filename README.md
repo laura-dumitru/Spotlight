@@ -21,3 +21,7 @@ git clone https://github.com/laura-dumitru/spotlight.git
 ```
 
 Since this is an example project I would encourage you to clone and rename it so that you can use it for your own purposes.
+
+## Employers
+
+You can see the original code I built while working at Mobkoi here: [Link to my gist](https://gist.github.com/laura-dumitru/fe54a7a923eb3edc36f075db9c5a20ed)
